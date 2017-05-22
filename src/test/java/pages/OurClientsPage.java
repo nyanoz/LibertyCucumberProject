@@ -1,15 +1,18 @@
 package pages;
 
+import helper.Base;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 
-public class OurClientsPage {
+public class OurClientsPage extends Base {
 
     private WebDriver driver;
 
     public OurClientsPage(WebDriver driver){
-        this.driver = driver;
+        this.driver =driver;
+
     }
 
     public void clickOnClientPage() throws InterruptedException{

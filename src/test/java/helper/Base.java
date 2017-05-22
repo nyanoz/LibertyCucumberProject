@@ -7,23 +7,26 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class Base {
 
-    public Base(){
+    public WebDriver driver;
 
+    public Base() {
+        driver = getDriver();
     }
 
-    public Base(WebDriver driver){
-        this.driver = driver;
+    public WebDriver getDriver() {
+        if (driver == null) {
+            driver = new ChromeDriver();
+        }
+        return driver;
     }
 
-   public WebDriver driver;
+    public void setUp(WebDriver driver) {
 
-    public void setUp(){
-        driver = new FirefoxDriver();
         driver.manage().window().maximize();
         driver.get("http://khabane.co.za/");
     }
 
-    public void tearDown(){
+    public void tearDown() {
         driver.close();
         driver.quit();
     }

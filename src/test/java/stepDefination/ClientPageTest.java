@@ -16,21 +16,19 @@ import pages.OurClientsPage;
 
 public class ClientPageTest extends Base {
 
-    public WebDriver driver = new FirefoxDriver();
+    Base base = new Base();
+    WebDriver driver = new FirefoxDriver();
 
-
-
-    OurClientsPage ourClientsPage;
+    OurClientsPage ourClientsPage = new OurClientsPage(driver);
 
     @Given("^Open Firefox and start application$")
     public void open_Firefox_and_start_application() throws Throwable{
-        driver.get("http://khabane.co.za/");
+        base.setUp(driver);
     }
 
     @When("^I click on the client page$")
     public void i_click_on_the_client_page() throws Throwable {
         ourClientsPage.clickOnClientPage();
-//        driver.findElement(By.xpath("id(\"khabane-nav-bar\")/ul[1]/li[3]/a[1]")).click();
     }
 
     @Then("^user should be redirected to the client page$")
@@ -38,8 +36,4 @@ public class ClientPageTest extends Base {
         Assert.assertEquals("We work closely with ","We work closely with ");
     }
 
-//    @After
-//    public void killBrowser(){
-//        base.tearDown();
-//    }
 }
