@@ -4,15 +4,15 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 
-public class LandingPage {
+public class HomePage {
     private WebDriver driver;
 
-    public LandingPage(WebDriver driver){
+    public HomePage(WebDriver driver){
         this.driver = driver;
     }
 
-    public void enterUserName(String username){
-        driver.findElement(By.xpath("//*[contains(concat( \" \", @class, \" \" ), concat( \" \", \"ng-valid-pattern\", \" \" ))]")).sendKeys(username);
+    public void assertHomePage(){
+        driver.findElement(By.name("WHO WE ARE"));
         return;
     }
 
