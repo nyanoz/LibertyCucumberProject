@@ -3,9 +3,7 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-/**
- * Created by manyano on 5/22/17.
- */
+
 public class OurClientsPage {
 
     private WebDriver driver;
@@ -14,11 +12,9 @@ public class OurClientsPage {
         this.driver = driver;
     }
 
-    public void clickOnClientPage(){
-        driver.findElement(By.linkText("Our Clients.")).click();
+    public void clickOnClientPage() throws InterruptedException{
+        driver.findElement(By.partialLinkText("our clients")).click();
     }
 
-    public void assertClientPage(){
-        driver.findElement(By.name("Our Clients."));
-    }
+
 }
