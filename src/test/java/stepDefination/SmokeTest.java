@@ -21,7 +21,7 @@ public class SmokeTest {
     public void open_Firefox_and_start_application() throws Throwable {
         driver = new FirefoxDriver();
         driver.manage().window().maximize();
-        driver.get("https://app.peakperformancetoolkit.biz/#!/");
+        driver.get("http://khabane.co.za/");
     }
 
     @When("^I provide valid username and password$")
