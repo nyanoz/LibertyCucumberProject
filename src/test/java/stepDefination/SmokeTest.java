@@ -21,7 +21,7 @@ public class SmokeTest {
     public void open_Firefox_and_start_application() throws Throwable {
         driver = new FirefoxDriver();
         driver.manage().window().maximize();
-        driver.get("https://www.facebook.com/");
+        driver.get("https://app.peakperformancetoolkit.biz/#!/");
     }
 
     @When("^I provide valid username and password$")
@@ -36,4 +36,8 @@ public class SmokeTest {
         landingPage.clickLogin();
     }
 
+    @After
+    public void teardown(){
+        driver.close();
+    }
 }

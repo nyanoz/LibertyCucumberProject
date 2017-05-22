@@ -3,11 +3,7 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import java.io.Console;
 
-/**
- * Created by manyano on 5/21/17.
- */
 public class LandingPage {
     private WebDriver driver;
 
@@ -16,17 +12,17 @@ public class LandingPage {
     }
 
     public void enterUserName(String username){
-        driver.findElement(By.id("email")).sendKeys(username);
+        driver.findElement(By.xpath("//*[contains(concat( \" \", @class, \" \" ), concat( \" \", \"ng-valid-pattern\", \" \" ))]")).sendKeys(username);
         return;
     }
 
     public void enterPassword(String password){
-        driver.findElement(By.id("pass")).sendKeys(password);
+        driver.findElement(By.xpath("//*[contains(concat( \" \", @class, \" \" ), concat( \" \", \"ng-invalid-required\", \" \" ))]")).sendKeys(password);
         return;
     }
 
     public void clickLogin(){
         this.driver.findElement(By.id("loginbutton")).click();
-//        return;
+        return;
     }
 }
