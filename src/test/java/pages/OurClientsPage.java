@@ -17,4 +17,8 @@ public class OurClientsPage {
     public void clickOnClientPage(){
         driver.findElement(By.linkText("Our Clients.")).click();
     }
+
+    public void assertClientPage(){
+        driver.findElement(By.name("Our Clients."));
+    }
 }
