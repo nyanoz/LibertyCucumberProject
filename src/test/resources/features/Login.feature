@@ -4,4 +4,3 @@ Feature: Test Facebook
     When I provide valid username and password
     Then user should be able to login
 
-    

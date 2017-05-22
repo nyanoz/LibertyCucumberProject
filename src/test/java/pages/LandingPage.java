@@ -3,6 +3,8 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import java.io.Console;
+
 /**
  * Created by manyano on 5/21/17.
  */
@@ -14,7 +16,7 @@ public class LandingPage {
     }
 
     public void enterUserName(String username){
-        driver.findElement(By.id("name")).sendKeys(username);
+        driver.findElement(By.id("email")).sendKeys(username);
         return;
     }
 
@@ -24,7 +26,7 @@ public class LandingPage {
     }
 
     public void clickLogin(){
-        driver.findElement(By.id("loginbutton")).click();
-        return;
+        this.driver.findElement(By.id("loginbutton")).click();
+//        return;
     }
 }
