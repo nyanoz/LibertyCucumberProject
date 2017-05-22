@@ -13,8 +13,8 @@ public class OurClientsPage {
     }
 
     public void clickOnClientPage() throws InterruptedException{
-        driver.findElement(By.partialLinkText("our clients")).click();
+        driver.findElement(By.xpath("id(\"khabane-nav-bar\")/ul[1]/li[3]/a[1]")).click();
+        return;
     }
-
 
 }

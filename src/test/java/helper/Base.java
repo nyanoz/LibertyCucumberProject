@@ -7,7 +7,15 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class Base {
 
-    WebDriver driver;
+    public Base(){
+
+    }
+
+    public Base(WebDriver driver){
+        this.driver = driver;
+    }
+
+   public WebDriver driver;
 
     public void setUp(){
         driver = new FirefoxDriver();
