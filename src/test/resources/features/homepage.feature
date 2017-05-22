@@ -1,6 +1,6 @@
-Feature: Test Facebook
+Feature: Test home page
   Scenario: Test Peak Performance Toolkit with valid credentials
-    Given Open Firefox and start application
-    When I provide valid username and password
-    Then user should be able to login
+    Given I am on a browser
+    When I enter a valid kmc url on the browser
+    Then I should be redirected to the kmc home page
 

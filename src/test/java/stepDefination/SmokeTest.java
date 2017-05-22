@@ -4,22 +4,18 @@ import cucumber.api.java.After;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import helper.Base;
 import pages.HomePage;
 
 
 public class SmokeTest {
 
-    WebDriver driver;
-
+    Base base;
     HomePage homePage;
 
-    @Given("^Open Firefox and start application$")
-    public void open_Firefox_and_start_application() throws Throwable {
-        driver = new FirefoxDriver();
-        driver.manage().window().maximize();
-        driver.get("http://khabane.co.za/");
+    @Given("^I am on a browser$")
+    public void i_am_on_a_browser() throws Throwable {
+        base.setUp();
     }
 
     @When("^I provide valid username and password$")
@@ -34,6 +30,6 @@ public class SmokeTest {
 
     @After
     public void teardown(){
-        driver.close();
+        base.tearDown();
     }
 }
