@@ -1,0 +1,8 @@
+pages/WhatWeDoPage.class
+runner/TestRunner.class
+pages/ArticlesPage.class
+pages/HomePage.class
+helper/Base.class
+pages/OurClientsPage.class
+stepDefination/ClientPageTest.class
+pages/GetIntouchPage.class
